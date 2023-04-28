@@ -1,11 +1,32 @@
 import { Content } from "@/april28_23/components/layout/layout";
 import { Card } from "@/april28_23/domainComponents/card/card";
 import { Slider } from "@/april28_23/domainComponents/slider/slider";
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const interFont = Inter({ subsets: ["latin"], variable: "--inter-font" });
+/**
+ * <><><> April 28th Practice Session - LESSONS LEARNED <><><>
+ *
+ * WINS:
+ * TailwindCSS is neat, can replace our use of Bootstrap for quick utility classes
+ * Planning first pays off always, having a rough idea of component breakdown ahead of time
+ * Got most of the mock re-created + the whole tailwind / project setup in about 1.5 - 1.75 hours, that's neat
+ * Proficiency with NextJS is increasing quickly
+ * Project directory structure seems pretty clean.
+ *
+ *
+ * LOSSES:
+ * Still a little rushed and dependent on constantly seeing the finished rendered thing to iterate
+ * Next time should try and allocate more time to refactoring and doing best practices
+ *  Perhaps next practice session should revisit this mock and cleanup the code, add animation, etc
+ *
+ * Things to Learn More:
+ * Balance between dedicated, heavier Styled Components vs. quick and easy utility class components from Tailwind
+ * Would have been cool to animate the slider across with React Spring and react-use-gesture (ran out of time)
+ * SSR for Tailwindd CSS seems to not be currently working https://github.com/vercel/next.js/issues/38561
+ *
+ *
+ */
 
 export default function Home() {
   const router = useRouter();

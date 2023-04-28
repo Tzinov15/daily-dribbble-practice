@@ -67,7 +67,11 @@ export const Card: React.FC<Props> = ({ children, ...props }) => {
         <span className={`${interFont.className} text-3xl font-bold `}>
           ${balance.toLocaleString()}
         </span>
-        <FontAwesomeIcon icon={icon} color="white" size="3x" />
+        <FontAwesomeIcon
+          icon={icon}
+          color={displayType === "primary" ? "black" : "white"}
+          size="3x"
+        />
       </div>
     </CardDiv>
   );
