@@ -2,6 +2,7 @@ import { Content, Header } from "@/april28_23/components/layout/layout";
 import { LogoText } from "@/april28_23/components/typography/typography";
 import { Shantell_Sans } from "next/font/google";
 import Head from "next/head";
+import Link from "next/link";
 
 const shantellSansFont = Shantell_Sans({ subsets: ["latin"], variable: "--shantell-font" });
 
@@ -24,7 +25,9 @@ export default function Home() {
       <Content>
         <ul>
           <li>
-            <h2>April 28th, 2013</h2>
+            <h2 className="text-white text-3xl">
+              <Link href="/april28_2023">April 28th, 2013</Link>
+            </h2>
           </li>
         </ul>
       </Content>

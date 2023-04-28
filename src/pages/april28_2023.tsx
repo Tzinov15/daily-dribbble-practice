@@ -3,10 +3,12 @@ import { Card } from "@/april28_23/domainComponents/card/card";
 import { Slider } from "@/april28_23/domainComponents/slider/slider";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const interFont = Inter({ subsets: ["latin"], variable: "--inter-font" });
 
 export default function Home() {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -19,9 +21,14 @@ export default function Home() {
       </Head>
       <Content>
         <div>
-          <a className="text-white" href="https://dribbble.com/shots/21320120-Banking-App">
-            https://dribbble.com/shots/21320120-Banking-App
-          </a>
+          <div className="flex items-center justify-between w-full my-4">
+            <span className="text-white" onClick={() => router.back()}>
+              Back
+            </span>
+            <a className="text-white" href="https://dribbble.com/shots/21320120-Banking-App">
+              Dribble
+            </a>
+          </div>
           <Card
             displayType="secondary"
             mask={4765111122225674}
